@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Blocker - Protection 18+",
+    "version": "1.0",
+    "description": "Bloque tous les sites web pour adultes",
+    "permissions": [
+      "declarativeNetRequest",
+      "declarativeNetRequestWithHostAccess",
+      "storage",
+      "activeTab"
+    ],
+    "host_permissions": [
+      "*://*/*"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "blockAdultSites",
+          "enabled": true,
+          "path": "rules.json"
+        }
+      ]
+    }
+  }
+  
